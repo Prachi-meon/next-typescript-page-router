@@ -1,7 +1,7 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ */
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,18 +16,17 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+.header,
+.footer {
+  display: flex;
+    width: 100%;
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+    justify-content: center;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    a {
+      float: right;
+      color: white;
+    }
 }
