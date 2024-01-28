@@ -1,5 +1,5 @@
 //When called, getSession() will send a request to /api/auth/session and returns a promise with a session object, or null if no session exists.
-import { Session } from "inspector";
+import Link from "next/link";
 import { getSession } from "next-auth/react";
 import { useState, useEffect } from "react";
 
@@ -57,9 +57,11 @@ const News = () => {
         {news.map((newOne: newsProps) => {
           return (
             <div key={newOne.id}>
-              <h1>
-                {newOne.id}. {newOne.title}
-              </h1>
+              <Link href={`/news/${newOne.id}`}>
+                <h1>
+                  {newOne.id}. {newOne.title}
+                </h1>
+              </Link>
               <p>{newOne.description}</p>
               <hr />
             </div>
